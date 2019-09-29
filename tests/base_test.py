@@ -9,7 +9,7 @@ class PTestBase:
 
     @BeforeSuite()
     def before_suite(self):
-        self.driver = AppiumDriver()  # Starting Driver here
+        self.driver = AppiumDriver()
         preporter.info("Start Driver")
         self.on_boarding_screen = OnBoardingScreen(self.driver)
         self.following_screen = FollowingScreen(self.driver)

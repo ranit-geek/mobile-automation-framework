@@ -2,7 +2,6 @@ from ptest.decorator import TestClass, Test
 from ptest.assertion import assert_equals, assert_false, assert_true
 from .base_test import PTestBase
 from resources.test_data import data
-from ptest.plogger import preporter
 
 
 @TestClass()
