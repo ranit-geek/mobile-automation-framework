@@ -20,6 +20,10 @@ class AppiumDriver(webdriver.Remote):
         wait_until = self.explicit_wait_time if wait_until is None else wait_until
         return WebDriverWait(self, wait_until).until(EC.presence_of_element_located(find_by))
 
+    def find_elements_present(self, find_by, wait_until=None):
+        wait_until = self.explicit_wait_time if wait_until is None else wait_until
+        return WebDriverWait(self, wait_until).until(EC.presence_of_all_elements_located(find_by))
+
     def find_element_visible(self, find_by, wait_until=None):
         wait_until = self.explicit_wait_time if wait_until is None else wait_until
         return WebDriverWait(self, wait_until).until(EC.visibility_of_element_located(find_by))
